@@ -48,11 +48,12 @@ public class ViewAdmin extends javax.swing.JFrame implements Runnable {
 
         jdpescritorio = new javax.swing.JDesktopPane();
         jLabel2 = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
         reloj2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        icon_materia = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        materias = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -77,20 +78,17 @@ public class ViewAdmin extends javax.swing.JFrame implements Runnable {
         salidas_productos_item = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         consultasClientes = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        consultasClientes1 = new javax.swing.JMenuItem();
-        reportecliente = new javax.swing.JMenu();
-        menuClientesSi = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        menuClientesNo = new javax.swing.JMenuItem();
+        consulta_productos_item = new javax.swing.JMenuItem();
+        entrada_materia_report_item = new javax.swing.JMenuItem();
+        entrda_producto_report_item = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Sistema de Ventas");
+        setTitle("Sistema de inventarios");
 
         jdpescritorio.setBackground(new java.awt.Color(25, 153, 153));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/car_icon-icons.com_54409.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/mimetypes_office_spreadsheet_table_xls_381.png"))); // NOI18N
         jLabel2.setLabelFor(entradas);
         jLabel2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -101,14 +99,18 @@ public class ViewAdmin extends javax.swing.JFrame implements Runnable {
         jdpescritorio.add(jLabel2);
         jLabel2.setBounds(850, 220, 130, 130);
 
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logo.png"))); // NOI18N
+        jdpescritorio.add(logo);
+        logo.setBounds(480, -10, 430, 180);
+
         reloj2.setFont(new java.awt.Font("Arial Narrow", 1, 60)); // NOI18N
         reloj2.setForeground(new java.awt.Color(255, 255, 255));
         reloj2.setText("jLabel11");
         jdpescritorio.add(reloj2);
-        reloj2.setBounds(480, 30, 290, 80);
+        reloj2.setBounds(550, 470, 290, 80);
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/car_23773.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/planta.png"))); // NOI18N
         jLabel3.setLabelFor(entradas);
         jLabel3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -119,17 +121,17 @@ public class ViewAdmin extends javax.swing.JFrame implements Runnable {
         jdpescritorio.add(jLabel3);
         jLabel3.setBounds(250, 220, 130, 130);
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/1486504829-clipboard-tasks-report-business-checking-verification-list_81387.png"))); // NOI18N
-        jLabel4.setLabelFor(entradas);
-        jLabel4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+        icon_materia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        icon_materia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/abonos.png"))); // NOI18N
+        icon_materia.setLabelFor(entradas);
+        icon_materia.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        icon_materia.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
+                icon_materiaMouseClicked(evt);
             }
         });
-        jdpescritorio.add(jLabel4);
-        jLabel4.setBounds(450, 220, 130, 130);
+        jdpescritorio.add(icon_materia);
+        icon_materia.setBounds(450, 220, 130, 130);
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/search_find_client_user_16693.png"))); // NOI18N
@@ -143,26 +145,26 @@ public class ViewAdmin extends javax.swing.JFrame implements Runnable {
         jdpescritorio.add(jLabel5);
         jLabel5.setBounds(650, 220, 130, 130);
 
-        jLabel6.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Reportes");
-        jdpescritorio.add(jLabel6);
-        jLabel6.setBounds(450, 350, 130, 30);
+        materias.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
+        materias.setForeground(new java.awt.Color(255, 255, 255));
+        materias.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        materias.setText("Materias primas");
+        jdpescritorio.add(materias);
+        materias.setBounds(430, 350, 180, 30);
 
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Materias prima");
+        jLabel7.setText("Reportes Salidas");
         jdpescritorio.add(jLabel7);
-        jLabel7.setBounds(850, 350, 130, 30);
+        jLabel7.setBounds(830, 350, 170, 30);
 
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Productos");
         jdpescritorio.add(jLabel8);
-        jLabel8.setBounds(250, 350, 170, 30);
+        jLabel8.setBounds(230, 350, 170, 30);
 
         jLabel9.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -171,9 +173,9 @@ public class ViewAdmin extends javax.swing.JFrame implements Runnable {
         jdpescritorio.add(jLabel9);
         jLabel9.setBounds(650, 350, 130, 30);
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/degradados-wallpapers-7.jpg"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/venados.jpg"))); // NOI18N
         jdpescritorio.add(jLabel10);
-        jLabel10.setBounds(0, -10, 1840, 1210);
+        jLabel10.setBounds(-20, -390, 1910, 1210);
 
         reloj.setText("jLabel3");
 
@@ -284,7 +286,7 @@ public class ViewAdmin extends javax.swing.JFrame implements Runnable {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu4.setText("Consultas");
+        jMenu4.setText("Reportes");
         jMenu4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenu4ActionPerformed(evt);
@@ -299,46 +301,31 @@ public class ViewAdmin extends javax.swing.JFrame implements Runnable {
         });
         jMenu4.add(consultasClientes);
 
-        jMenuItem1.setText("Productos");
-        jMenu4.add(jMenuItem1);
-
-        consultasClientes1.setText("Usuarios");
-        consultasClientes1.addActionListener(new java.awt.event.ActionListener() {
+        consulta_productos_item.setText("Productos");
+        consulta_productos_item.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                consultasClientes1ActionPerformed(evt);
+                consulta_productos_itemActionPerformed(evt);
             }
         });
-        jMenu4.add(consultasClientes1);
+        jMenu4.add(consulta_productos_item);
+
+        entrada_materia_report_item.setText("Entrada Materias");
+        entrada_materia_report_item.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                entrada_materia_report_itemActionPerformed(evt);
+            }
+        });
+        jMenu4.add(entrada_materia_report_item);
+
+        entrda_producto_report_item.setText("Entrada Productos");
+        entrda_producto_report_item.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                entrda_producto_report_itemActionPerformed(evt);
+            }
+        });
+        jMenu4.add(entrda_producto_report_item);
 
         jMenuBar1.add(jMenu4);
-
-        reportecliente.setText("Reportes");
-
-        menuClientesSi.setText("Ingresos del dia");
-        menuClientesSi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuClientesSiActionPerformed(evt);
-            }
-        });
-        reportecliente.add(menuClientesSi);
-
-        jMenuItem2.setText("Ingresos mensual");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        reportecliente.add(jMenuItem2);
-
-        menuClientesNo.setText("Clientes mensuales");
-        menuClientesNo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuClientesNoActionPerformed(evt);
-            }
-        });
-        reportecliente.add(menuClientesNo);
-
-        jMenuBar1.add(reportecliente);
 
         setJMenuBar(jMenuBar1);
 
@@ -419,13 +406,10 @@ private void movimientoEntradasMateriasActionPerformed(java.awt.event.ActionEven
 
 }//GEN-LAST:event_movimientoEntradasMateriasActionPerformed
 
-private void menuClientesSiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuClientesSiActionPerformed
-// TODO add your handling code here:
-
-
-}//GEN-LAST:event_menuClientesSiActionPerformed
-
 private void consultasClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultasClientesActionPerformed
+      ConsultasMaterias ip = new ConsultasMaterias();
+        jdpescritorio.add(ip);
+        ip.show();
 
 
 }//GEN-LAST:event_consultasClientesActionPerformed
@@ -441,21 +425,12 @@ private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
 // TODO add your handling code here:
 }//GEN-LAST:event_jMenu4ActionPerformed
 
-private void menuClientesNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuClientesNoActionPerformed
-// TODO add your handling code here:
-
-}//GEN-LAST:event_menuClientesNoActionPerformed
-
     private void usuarios_itemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarios_itemActionPerformed
         Usuarios ip = new Usuarios();
 
         jdpescritorio.add(ip);
         ip.show();
     }//GEN-LAST:event_usuarios_itemActionPerformed
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void entradas_productos_itemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entradas_productos_itemActionPerformed
         EntradaProductos ip = new EntradaProductos();
@@ -471,9 +446,9 @@ private void menuClientesNoActionPerformed(java.awt.event.ActionEvent evt) {//GE
 
     }//GEN-LAST:event_jLabel5MouseClicked
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+    private void icon_materiaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_icon_materiaMouseClicked
 
-    }//GEN-LAST:event_jLabel4MouseClicked
+    }//GEN-LAST:event_icon_materiaMouseClicked
 
     private void salidas_productos_itemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salidas_productos_itemActionPerformed
         SalidasProductos ip = new SalidasProductos();
@@ -491,9 +466,21 @@ private void menuClientesNoActionPerformed(java.awt.event.ActionEvent evt) {//GE
         ip.show();
     }//GEN-LAST:event_productos_itemActionPerformed
 
-    private void consultasClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultasClientes1ActionPerformed
+    private void entrada_materia_report_itemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrada_materia_report_itemActionPerformed
+        ConsultasEntradasMaterias ip = new ConsultasEntradasMaterias();
+        jdpescritorio.add(ip);
+        ip.show();
+    }//GEN-LAST:event_entrada_materia_report_itemActionPerformed
+
+    private void consulta_productos_itemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consulta_productos_itemActionPerformed
+         ConsultasProductos ip = new ConsultasProductos();
+        jdpescritorio.add(ip);
+        ip.show();
+    }//GEN-LAST:event_consulta_productos_itemActionPerformed
+
+    private void entrda_producto_report_itemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrda_producto_report_itemActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_consultasClientes1ActionPerformed
+    }//GEN-LAST:event_entrda_producto_report_itemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -539,18 +526,19 @@ private void menuClientesNoActionPerformed(java.awt.event.ActionEvent evt) {//GE
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem cerrarsecion;
+    private javax.swing.JMenuItem consulta_productos_item;
     private javax.swing.JMenuItem consultasClientes;
-    private javax.swing.JMenuItem consultasClientes1;
+    private javax.swing.JMenuItem entrada_materia_report_item;
     private javax.swing.JMenu entradas;
     private javax.swing.JMenuItem entradas_productos_item;
+    private javax.swing.JMenuItem entrda_producto_report_item;
     private javax.swing.JLabel ho;
+    private javax.swing.JLabel icon_materia;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -559,18 +547,15 @@ private void menuClientesNoActionPerformed(java.awt.event.ActionEvent evt) {//GE
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     public static javax.swing.JDesktopPane jdpescritorio;
     public static javax.swing.JLabel lblusu;
+    private javax.swing.JLabel logo;
+    private javax.swing.JLabel materias;
     private javax.swing.JMenuItem materias_primas_item;
-    private javax.swing.JMenuItem menuClientesNo;
-    private javax.swing.JMenuItem menuClientesSi;
     private javax.swing.JMenuItem movimientoEntradasMaterias;
     private javax.swing.JMenuItem productos_item;
     public static javax.swing.JLabel reloj;
     private javax.swing.JLabel reloj2;
-    private javax.swing.JMenu reportecliente;
     private javax.swing.JMenuItem salidas_materias_item;
     private javax.swing.JMenuItem salidas_productos_item;
     private javax.swing.JMenuItem salir;

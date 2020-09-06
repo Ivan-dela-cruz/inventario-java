@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="383254bd-37c5-4083-a040-dd85f113645d">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="codigo" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<field name="cantidad_inicial" class="java.lang.String"/>
+	<field name="stock" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="186" y="0" width="369" height="51" uuid="751f738a-5b26-4174-b329-83da8c85513a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE MATERIAS PRIMAS]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="156" height="51" uuid="88fbc7a0-44d7-4d2f-b3e0-2a5f65f23dd3"/>
+				<imageExpression><![CDATA["C:\\Users\\ivan\\Documents\\NetBeansProjects\\Inventario\\src\\icons\\semillas.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="51" width="286" height="8" forecolor="#FFFFFF" backcolor="#CCFFCC" uuid="66c1c24a-93ef-478b-be2e-87410f4e1213"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="276" y="51" width="279" height="8" forecolor="#FFFFFF" backcolor="#F4F3F3" uuid="3078dd5a-d55d-4afb-a7c3-cbb07ae267a4"/>
+			</rectangle>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="393" y="0" width="162" height="20" uuid="e8d4e444-709a-4123-9071-7f08db692c72"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="316" y="0" width="85" height="20" uuid="da2b100e-94cc-424d-bc4d-6983cbef9773"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INICIAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="0" width="115" height="20" uuid="3dffb72d-a57d-404f-9dca-7d4cd3a5818b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPCIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="80" height="20" uuid="3e44189a-63bb-4174-a12f-acd648582ec2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="0" width="116" height="20" uuid="b2ddc2dc-d755-4081-a41d-6e386cdc04b6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATERIA PRIMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="0" width="84" height="20" uuid="1861c1be-ad0f-4bc6-8feb-d422f074699a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CÓDIGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="0" width="75" height="20" uuid="746f4adb-f469-4c6f-8996-0a51e7e2c486"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STOCK]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="0" width="84" height="13" uuid="9c2bdd51-b027-4d6e-a548-a77c134af4c8"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="0" width="115" height="13" uuid="dab09b4d-df44-4876-b159-e196af0468e1"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="0" width="115" height="13" uuid="ecb2c4b6-5081-4250-9a0c-ec65c6aa5658"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="0" width="85" height="13" uuid="15ff1824-6cf3-4de3-b0e7-3e59e90d0c93"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad_inicial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="0" width="75" height="13" uuid="88f7e6e2-f35e-4133-9939-2dfeed7695c9"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stock}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="0" width="80" height="13" uuid="bebf3c67-6ed7-4be7-8cf0-974dd01a07c3"/>
+				<textElement>
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="5" y="0" width="80" height="20" uuid="74cb41a1-649c-4408-aa42-73fb1d395b4e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="85" y="0" width="40" height="20" uuid="b6e13983-2bf1-4351-8c21-0b209397a848"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

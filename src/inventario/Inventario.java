@@ -6,6 +6,8 @@
 package inventario;
 
 import conexion.Conexion;
+import javax.swing.UIManager;
+import views.Login;
 import views.ViewAdmin;
 
 /**
@@ -17,20 +19,30 @@ public class Inventario {
     /**
      * @param args the command line arguments
      */
-   public static Conexion hc;
+    public static Conexion hc;
+
     public static void main(String[] args) {
+
+        try {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         try {
             hc = new Conexion();
             System.out.println("conectado main");
-             ViewAdmin admin = new ViewAdmin();
-                admin.show();
+            Login login = new Login();
+            login.setVisible(true);
 
         } catch (Exception e) {
             System.out.println("ERROR AL INICIAR " + e);
         }
-        
-   
-       
+
     }
-    
+
 }

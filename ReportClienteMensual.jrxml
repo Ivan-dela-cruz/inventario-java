@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e03230c-ac7d-497e-bc5a-09151fb45c54">
+	<property name="ireport.zoom" value="1.210000000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="total" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM productos]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad_inicial" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stock" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="79" backcolor="#0099FF" uuid="b8bd8909-faae-4ad8-b39c-fa8451721b7b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="97" y="44" width="333" height="35" forecolor="#FFFFFF" uuid="7157490c-794f-4653-a84d-0865bb0a8d32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE PRODUCTOS ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="0" width="290" height="20" forecolor="#FFFFFF" uuid="4a8ed961-091f-46a5-8d4a-e1e30c18641c"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE EMPRESA  "JS"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="24" width="349" height="20" forecolor="#FFFFFF" uuid="72dbb1f7-f34b-4bc7-a8ec-2bbecb145b63"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Calle: Quito y Juan Abel Echeverría   Telf: 03 233 3820]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="27" backcolor="#3399FF" uuid="eece9e29-15d2-4778-b71c-c9049f665f5a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="81" height="27" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="97237a59-6df4-482d-8eaa-0081a8f61d14"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   CÓDIGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="0" width="147" height="27" forecolor="#FFFFFF" uuid="b00664ef-605f-4c56-9cb2-c2f28c4851d7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   DESCRIPCIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="0" width="115" height="27" forecolor="#FFFFFF" uuid="e9f7ae89-46ed-4311-99f9-e15b03ab8491"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   PRODUCTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="0" width="66" height="27" forecolor="#FFFFFF" uuid="cd5cb736-38bd-428d-be0a-cc661300715c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   STOCK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="491" y="0" width="64" height="27" forecolor="#FFFFFF" uuid="3453d887-a83b-49b3-b685-b4a9cc8e15d2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   ESTADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="0" width="82" height="27" forecolor="#FFFFFF" uuid="c1c7fdca-9b1e-4aef-a34c-0856594bab69"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  CANTIDAD INICIAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="-3" y="-1" width="84" height="20" uuid="abe52a3a-8ecf-44b6-8141-06b41ee4ced3"/>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="0" width="115" height="20" uuid="68e44bee-c858-40d6-b1ae-f44df490c546"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="196" y="0" width="147" height="20" uuid="f6e5cab3-f63b-43d4-a9dd-dfca62dbc348"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="343" y="0" width="82" height="20" uuid="d5a3b26f-a739-49a8-b5ae-240a54964dba"/>
+				<textFieldExpression><![CDATA[$F{cantidad_inicial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="425" y="0" width="66" height="20" uuid="9d10ac40-73a0-4f0d-a274-fa6e6d1763e6"/>
+				<textFieldExpression><![CDATA[$F{stock}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="491" y="0" width="64" height="20" uuid="c5b262bd-4af3-4dfe-be2c-104af6f1c52a"/>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="21">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="0" width="100" height="20" uuid="21783bdf-4327-46cf-83ce-88a222e636fb"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="0" width="80" height="20" uuid="ac571b66-1f18-4a1e-80ca-a36688f5f98a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="0" width="40" height="20" uuid="1b59eb43-2dca-4804-9685-d5c68ab2b29e"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="27">
+			<textField>
+				<reportElement x="494" y="0" width="61" height="20" uuid="7ff3e81a-b91f-4b09-9a32-b9bf1449b7e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="394" y="1" width="100" height="19" forecolor="#0033FF" uuid="5ebee126-04ca-4eb3-bac7-47693cc25a65"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Total entradas:]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
